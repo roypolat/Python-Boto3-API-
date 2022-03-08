@@ -1,0 +1,266 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.loaders:Loading JSON file: /root/.local/lib/python2.7/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f58f1f7a6d0>
+DEBUG:botocore.loaders:Loading JSON file: /root/.local/lib/python2.7/site-packages/botocore/data/ec2/2016-11-15/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7f58f200a7d0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /root/.local/lib/python2.7/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7f58f1f7bf90>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <function generate_idempotent_uuid at 0x7f58f1f7e650>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeInstances: calling handler <function inject_api_version_header_if_needed at 0x7f58f1f86c50>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeInstances) with params: {'body': {'Action': u'DescribeInstances', 'Version': u'2016-11-15'}, 'url': u'https://ec2.us-east-1.amazonaws.com/', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.112 Python/2.7.18 Linux/5.3.0-kali2-amd64 Botocore/1.20.112'}, 'context': {'auth_type': None, 'client_region': u'us-east-1', 'has_streaming_input': False, 'client_config': <botocore.config.Config object at 0x7f58f0b83b10>}, 'query_string': '', 'url_path': '/', 'method': u'POST'}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f58f0b83ad0>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeInstances: calling handler <function set_operation_specific_signer at 0x7f58f1f7e550>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-1.amazonaws.com
+x-amz-date:20220307T151555Z
+
+content-type;host;x-amz-date
+6171eb09865e32b0602af0f7957e26573a51f53caaedff02ff88883cb0275885
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220307T151555Z
+20220307/us-east-1/ec2/aws4_request
+38adcbe73a104a2b2b1ef55a9b1ffc6f2898640022d040312000c158364fc0b8
+DEBUG:botocore.auth:Signature:
+8fa7391fdc4ef5fd250cb7cc345b445143807b52c7859764a3eab5e68e456d3f
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-1.amazonaws.com/, headers={'Content-Length': '43', 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'Authorization': 'AWS4-HMAC-SHA256 Credential=AKIAXUPYVJVKTYIKU5FC/20220307/us-east-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=8fa7391fdc4ef5fd250cb7cc345b445143807b52c7859764a3eab5e68e456d3f', 'X-Amz-Date': '20220307T151555Z', 'User-Agent': 'Boto3/1.17.112 Python/2.7.18 Linux/5.3.0-kali2-amd64 Botocore/1.20.112'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python2.7/dist-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ec2.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://ec2.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 7318
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '6cfdf4e3-ba84-4dc1-9880-0bff6986d500', 'Content-Length': '7318', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'vary': 'accept-encoding', 'Server': 'AmazonEC2', 'Cache-Control': 'no-cache, no-store', 'Date': 'Mon, 07 Mar 2022 15:15:57 GMT', 'Content-Type': 'text/xml;charset=UTF-8'}
+DEBUG:botocore.parsers:Response body:
+<?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>6cfdf4e3-ba84-4dc1-9880-0bff6986d500</requestId>
+    <reservationSet>
+        <item>
+            <reservationId>r-0d847dc5974499498</reservationId>
+            <ownerId>525044370773</ownerId>
+            <groupSet/>
+            <instancesSet>
+                <item>
+                    <instanceId>i-0e246188a00c50cd4</instanceId>
+                    <imageId>ami-04505e74c0741db8d</imageId>
+                    <instanceState>
+                        <code>80</code>
+                        <name>stopped</name>
+                    </instanceState>
+                    <privateDnsName>ip-172-31-87-142.ec2.internal</privateDnsName>
+                    <dnsName/>
+                    <reason>User initiated (2022-03-05 19:37:28 GMT)</reason>
+                    <keyName>projecktkey</keyName>
+                    <amiLaunchIndex>0</amiLaunchIndex>
+                    <productCodes/>
+                    <instanceType>t2.micro</instanceType>
+                    <launchTime>2022-03-05T19:37:10.000Z</launchTime>
+                    <placement>
+                        <availabilityZone>us-east-1a</availabilityZone>
+                        <groupName/>
+                        <groupId/>
+                        <tenancy>default</tenancy>
+                    </placement>
+                    <monitoring>
+                        <state>disabled</state>
+                    </monitoring>
+                    <subnetId>subnet-55012574</subnetId>
+                    <vpcId>vpc-de442ea3</vpcId>
+                    <privateIpAddress>172.31.87.142</privateIpAddress>
+                    <sourceDestCheck>true</sourceDestCheck>
+                    <groupSet>
+                        <item>
+                            <groupId>sg-0409d14d1bad71d09</groupId>
+                            <groupName>launch-wizard-1</groupName>
+                        </item>
+                    </groupSet>
+                    <stateReason>
+                        <code>Client.UserInitiatedShutdown</code>
+                        <message>Client.UserInitiatedShutdown: User initiated shutdown</message>
+                    </stateReason>
+                    <architecture>x86_64</architecture>
+                    <rootDeviceType>ebs</rootDeviceType>
+                    <rootDeviceName>/dev/sda1</rootDeviceName>
+                    <blockDeviceMapping>
+                        <item>
+                            <deviceName>/dev/sda1</deviceName>
+                            <ebs>
+                                <volumeId>vol-05d56a32b3792e4c0</volumeId>
+                                <status>attached</status>
+                                <attachTime>2022-03-05T14:03:00.000Z</attachTime>
+                                <deleteOnTermination>true</deleteOnTermination>
+                            </ebs>
+                        </item>
+                    </blockDeviceMapping>
+                    <virtualizationType>hvm</virtualizationType>
+                    <clientToken/>
+                    <hypervisor>xen</hypervisor>
+                    <networkInterfaceSet>
+                        <item>
+                            <networkInterfaceId>eni-0ff3f63c110a4b536</networkInterfaceId>
+                            <subnetId>subnet-55012574</subnetId>
+                            <vpcId>vpc-de442ea3</vpcId>
+                            <description/>
+                            <ownerId>525044370773</ownerId>
+                            <status>in-use</status>
+                            <macAddress>12:47:d4:9c:fd:5f</macAddress>
+                            <privateIpAddress>172.31.87.142</privateIpAddress>
+                            <privateDnsName>ip-172-31-87-142.ec2.internal</privateDnsName>
+                            <sourceDestCheck>true</sourceDestCheck>
+                            <groupSet>
+                                <item>
+                                    <groupId>sg-0409d14d1bad71d09</groupId>
+                                    <groupName>launch-wizard-1</groupName>
+                                </item>
+                            </groupSet>
+                            <attachment>
+                                <attachmentId>eni-attach-057a4fa57f65c18ad</attachmentId>
+                                <deviceIndex>0</deviceIndex>
+                                <status>attached</status>
+                                <attachTime>2022-03-05T14:02:59.000Z</attachTime>
+                                <deleteOnTermination>true</deleteOnTermination>
+                                <networkCardIndex>0</networkCardIndex>
+                            </attachment>
+                            <privateIpAddressesSet>
+                                <item>
+                                    <privateIpAddress>172.31.87.142</privateIpAddress>
+                                    <privateDnsName>ip-172-31-87-142.ec2.internal</privateDnsName>
+                                    <primary>true</primary>
+                                </item>
+                            </privateIpAddressesSet>
+                            <ipv6AddressesSet/>
+                            <interfaceType>interface</interfaceType>
+                        </item>
+                    </networkInterfaceSet>
+                    <ebsOptimized>false</ebsOptimized>
+                    <enaSupport>true</enaSupport>
+                    <cpuOptions>
+                        <coreCount>1</coreCount>
+                        <threadsPerCore>1</threadsPerCore>
+                    </cpuOptions>
+                    <capacityReservationSpecification>
+                        <capacityReservationPreference>open</capacityReservationPreference>
+                    </capacityReservationSpecification>
+                    <hibernationOptions>
+                        <configured>false</configured>
+                    </hibernationOptions>
+                    <enclaveOptions>
+                        <enabled>false</enabled>
+                    </enclaveOptions>
+                    <metadataOptions>
+                        <state>applied</state>
+                        <httpTokens>optional</httpTokens>
+                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>
+                        <httpEndpoint>enabled</httpEndpoint>
+                        <httpProtocolIpv4>enabled</httpProtocolIpv4>
+                        <httpProtocolIpv6>disabled</httpProtocolIpv6>
+                        <instanceMetadataTags>disabled</instanceMetadataTags>
+                    </metadataOptions>
+                    <platformDetails>Linux/UNIX</platformDetails>
+                    <usageOperation>RunInstances</usageOperation>
+                    <usageOperationUpdateTime>2022-03-05T14:02:59.000Z</usageOperationUpdateTime>
+                    <privateDnsNameOptions>
+                        <hostnameType>ip-name</hostnameType>
+                        <enableResourceNameDnsARecord>false</enableResourceNameDnsARecord>
+                        <enableResourceNameDnsAAAARecord>false</enableResourceNameDnsAAAARecord>
+                    </privateDnsNameOptions>
+                </item>
+            </instancesSet>
+        </item>
+    </reservationSet>
+</DescribeInstancesResponse>
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x7f58f0ae24d0>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 10:15:56] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 200 -
+2022-03-07 10:18:48,772 INFO MainThread  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-07 10:18:52,372 INFO Thread-1   127.0.0.1 - - [07/Mar/2022 10:18:52] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 200 -
+2022-03-07 10:19:03,837 ERROR Thread-2   Exception on /ec2/start [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/root/flask_app/test.py", line 55, in endPoint2
+    ec2.start_instances(InstanceIds=[InstanceId])
+  File "/root/.local/lib/python2.7/site-packages/botocore/client.py", line 386, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/root/.local/lib/python2.7/site-packages/botocore/client.py", line 705, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+ClientError: An error occurred (AuthFailure) when calling the StartInstances operation: AWS was not able to validate the provided access credentials
+2022-03-07 10:19:03,844 INFO Thread-2   127.0.0.1 - - [07/Mar/2022 10:19:03] "GET /ec2/start?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 500 -
+2022-03-07 10:20:16,028 ERROR Thread-3   Exception on /ec2/start [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/root/flask_app/test.py", line 55, in endPoint2
+    ec2.start_instances(InstanceIds=[InstanceId])
+  File "/root/.local/lib/python2.7/site-packages/botocore/client.py", line 386, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/root/.local/lib/python2.7/site-packages/botocore/client.py", line 705, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+ClientError: An error occurred (AuthFailure) when calling the StartInstances operation: AWS was not able to validate the provided access credentials
+2022-03-07 10:20:16,030 INFO Thread-3   127.0.0.1 - - [07/Mar/2022 10:20:16] "GET /ec2/start?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 500 -
+2022-03-07 10:21:47,993 INFO MainThread  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-07 10:21:51,226 INFO Thread-1   127.0.0.1 - - [07/Mar/2022 10:21:51] "GET /ec2/start?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 200 -
+2022-03-07 10:22:19,795 ERROR Thread-2   Exception on /ec2/stop [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/root/flask_app/test.py", line 72, in endPoint3
+    ec2.stop_instances(InstanceIds=[InstanceId])
+  File "/root/.local/lib/python2.7/site-packages/botocore/client.py", line 386, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/root/.local/lib/python2.7/site-packages/botocore/client.py", line 705, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+ClientError: An error occurred (AuthFailure) when calling the StopInstances operation: AWS was not able to validate the provided access credentials
+2022-03-07 10:22:19,802 INFO Thread-2   127.0.0.1 - - [07/Mar/2022 10:22:19] "GET /ec2/stop?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 500 -
+2022-03-07 10:23:18,693 INFO MainThread  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-07 10:23:26,573 INFO Thread-1   127.0.0.1 - - [07/Mar/2022 10:23:26] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd HTTP/1.1" 200 -
+2022-03-07 10:23:48,046 INFO Thread-2   127.0.0.1 - - [07/Mar/2022 10:23:48] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:23:58,522 INFO Thread-3   127.0.0.1 - - [07/Mar/2022 10:23:58] "GET /ec2/start?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:24:36,438 INFO Thread-4   127.0.0.1 - - [07/Mar/2022 10:24:36] "GET /ec2/stop?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:25:40,006 INFO MainThread  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-07 10:25:44,108 INFO Thread-1   127.0.0.1 - - [07/Mar/2022 10:25:44] "GET /ec2/stop?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:26:03,444 INFO Thread-2   127.0.0.1 - - [07/Mar/2022 10:26:03] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:27:27,975 INFO MainThread  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-07 10:27:35,377 INFO Thread-1   127.0.0.1 - - [07/Mar/2022 10:27:35] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:27:55,528 INFO Thread-2   127.0.0.1 - - [07/Mar/2022 10:27:55] "GET /ec2/list?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
+2022-03-07 10:28:05,376 INFO Thread-3   127.0.0.1 - - [07/Mar/2022 10:28:05] "GET /ec2/stop?aws_access_key_id=AKIAXUPYVJVKTYIKU5FC&aws_secret_access_key=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&region_name=us-east-1&InstanceId=i-0e246188a00c50cd4 HTTP/1.1" 200 -
